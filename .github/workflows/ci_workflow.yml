@@ -86,6 +86,8 @@ jobs:
       - name: Install dependencies
         run: poetry install --no-interaction --no-root
         if: steps.poetry-cache.outputs.cache-hit != 'true'
+      - name: Setup project
+        run: poetry install
       - name: Run tests
         run: |
           make test

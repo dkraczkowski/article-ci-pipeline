@@ -56,7 +56,7 @@ omit = [
   "tests/*"
 ]
 source = [
-  "src/mycode/*"
+  "src/my_project/*"
 ]
 
 [tool.isort]
