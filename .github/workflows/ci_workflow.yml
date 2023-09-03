@@ -23,7 +23,7 @@ jobs:
           poetry config virtualenvs.in-project true
       - name: Install dependencies from cache
         id: poetry-cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: .venv
           key: poetry-ci-dependencies-${{ hashFiles('**/poetry.lock') }}
@@ -50,7 +50,7 @@ jobs:
           poetry config virtualenvs.in-project true
       - name: Install dependencies from cache
         id: poetry-cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: .venv
           key: poetry-ci-dependencies-${{ hashFiles('**/poetry.lock') }}
@@ -79,7 +79,7 @@ jobs:
           poetry config virtualenvs.in-project true
       - name: Install dependencies from cache
         id: poetry-cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: .venv
           key: poetry-tests-dependencies-${{ hashFiles('**/poetry.lock') }}
@@ -107,7 +107,7 @@ jobs:
           poetry config virtualenvs.in-project true
       - name: Install dependencies from cache
         id: poetry-cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: .venv
           key: poetry-ci-dependencies-${{ hashFiles('**/poetry.lock') }}
